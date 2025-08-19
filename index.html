@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reader</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Turn.js CSS -->
+    <style>
+        .flipbook {
+            width: 800px;
+            height: 600px;
+            margin: 20px auto;
+        }
+        .flipbook .page {
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            line-height: 600px;
+            font-size: 20px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .flipbook .page img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="flipbook" id="flipbook">
+            <!-- Pages will be dynamically generated -->
+        </div>
+        
+        <div class="controls">
+            <button id="prev-btn" class="nav-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            
+            <button id="next-btn" class="nav-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Loading book pages...</p>
+    </div>
+    
+    <!-- jQuery (required by Turn.js) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Turn.js (local copy) -->
+    <script src="turn.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
